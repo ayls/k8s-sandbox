@@ -63,11 +63,6 @@ resource "azurerm_kubernetes_cluster" "k8s" {
     os_disk_size_gb = 30
   }
 
-  # service_principal {
-  #   client_id     = azuread_service_principal.aks_sp.application_id
-  #   client_secret = azuread_service_principal_password.aks_sp_password.value
-  # }
-
   identity {
     type = "SystemAssigned"
   }  
